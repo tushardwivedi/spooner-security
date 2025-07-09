@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply transition-all duration-300 ease-in-out cursor-pointer;
+  }
+  
+  .nav-link:hover {
+    @apply text-orange-700 transform -translate-y-0.5;
+  }
+  
+  .hero-button {
+    @apply transition-all duration-300 transform hover:scale-105 cursor-pointer;
+  }
+  
+  .feature-card {
+    @apply bg-white p-6 rounded-xl shadow-md border border-slate-200 text-center transform transition-transform hover:scale-105 cursor-pointer;
+  }
+  
+  .terminal-window {
+    @apply bg-slate-900 rounded-lg shadow-xl overflow-hidden border border-slate-700;
+  }
+  
+  .terminal-header {
+    @apply flex items-center justify-between bg-slate-800 p-2 text-slate-400 text-sm;
+  }
+  
+  .terminal-content {
+    @apply text-green-300 text-sm p-4 leading-relaxed overflow-x-auto font-mono;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
